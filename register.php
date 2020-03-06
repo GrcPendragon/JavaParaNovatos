@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +20,7 @@
 <body>
     <!--Barra de navegación-->
     <nav class="navbar navbar-light bg-info text-white">
-        <a class="navbar-brand text-white" href="index.html">
+        <a class="navbar-brand text-white" href="index.php">
             <h3 class="">
                 <div class="d-flex flex-row bd-highlight">
                     <div class="p-2 bd-highlight bg-light rounded">
@@ -39,8 +38,8 @@
         </a>
 
         <div class="btn-group d-none d-md-block" role="group" aria-label="Basic example">
-            <a class="btn btn-lg btn-outline-light" href="index.html">Inicio</a>
-            <a class="btn btn-lg btn-outline-light" href="login.html">Iniciar sesión</a>
+            <a class="btn btn-lg btn-outline-light" href="index.php">Inicio</a>
+            <a class="btn btn-lg btn-outline-light" href="login.php">Iniciar sesión</a>
             <a class="btn btn-lg btn-outline-light active" href="">Registrar</a>
         </div>
         <div class="dropdown dropleft d-block d-sm-block d-md-none">
@@ -60,20 +59,28 @@
         <div class="row justify-content-md-center">
             <div class="col-sm-12 col-md-10 col-lg-10 mt-5 p-3">
                 <div class="container p-2 border border-info rounded-lg ">                    
-                    <form action="" class="px-5 pt-3 text-center">
+                    <form action="php/registrar.php" method="post" class="px-5 pt-3 text-center">
                         <h2>Registro</h2>
+                        
                         <div class="row">
                             <div class="col">
-                              <input type="text" class="m-2 form-control border border-info" placeholder="Nombre(s)">
+                              <input type="text" name="nombre" class="m-2 form-control border border-info" placeholder="Nombre(s)" required>
                             </div>
                             <div class="col">
-                              <input type="text" class="m-2 form-control border border-info" placeholder="Apellidos">
+                              <input type="text" name="apellido" class="m-2 form-control border border-info" placeholder="Apellidos" required>
                             </div>
                           </div>
-                        <input type="email" class="m-2 form-control border border-info" placeholder="Correo">
-                        <input type="password" class="m-2 form-control border border-info" placeholder="Contraseña">
-                        <input type="password" class="m-2 form-control border border-info" placeholder="Repetir contraseña">
+                        <input type="email" name="correo" class="m-2 form-control border border-info" placeholder="Correo" required>
+                        <input type="text" name="usuario" class="m-2 form-control border border-info" placeholder="Usuario" required>
+                        <input type="password" name="pass" class="m-2 form-control border border-info" placeholder="Contraseña" required>
+                        <input type="password" name="passR" class="m-2 form-control border border-info" placeholder="Repetir contraseña" required>
+                        <?php
+                            if($existe == true){
+                                echo 'El usuario ya existe.';
+                            }
+                        ?>
                         <button type="submit" class="m-3 btn btn-lg btn-outline-info">Registrarme</button>
+
                     </form>
                 </div>
             </div>
