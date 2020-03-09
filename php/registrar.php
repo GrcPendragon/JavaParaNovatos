@@ -10,20 +10,19 @@ $clave = md5($_REQUEST["pass"]);
 $rClave = md5($_REQUEST["passR"]);
 $url_Img = "../userImg/defaultIMG.png";
 $estado = "activo";
-$tema_Actual = 0;
+$tema_Actual = 1;
 $existe = false;
     if ($clave == $rClave) {
 
-        $query = $dataBase->connect()->prepare('SELECT * FROM usuario WHERE nickname = :user');
-        $query->execute(['user'=>$usuario]);
+        $query = $dataBase->consulta('SELECT * FROM usuario WHERE nickname = "'.$usuario.'" or correo = "'.$correo'"');
             
         if($query->rowCount()){
             $existe = true;
             header('location:signup.php');
             
         }else{
-            $query = $dataBase->connect()->prepare('INSERT INTO usuario(id_Usuario, nombre, apellido, nickname, correo, pass, url_Img, estado, tema_Actual)VALUES(null,:nombre,:apellido,:usuario,:correo, :pass, :url_Img, :estado, null)');
-            $query->execute(['nombre' => $nombre, 'apellido' => $apellido, 'usuario' => $usuario, 'correo' => $correo, 'pass' => $clave, 'url_Img' => $url_Img, 'estado' => $estado]);
+            $query = $dataBase->insertar('INSERT INTO usuario(id_Usuario, nombre, apellido, nickname, correo, pass, url_Img, estado, tema_Actual)VALUES(null,"'.$nombre.'","',$apellido.'","'.$usuario.'","'.$correo.'","'. $clave.'","'. $url_Img.'", "'.$estado'",'.$tema_Actual ));
+            $query->execute();
             $existe = false;
             header('location:../index.php');
         }

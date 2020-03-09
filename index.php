@@ -21,7 +21,7 @@
 <body>
     <!--Barra de navegación-->
     <nav class="navbar navbar-light bg-info text-white">
-        <a class="navbar-brand text-white" href="#">
+        <a class="navbar-brand text-white" href="index.php">
             <h3 class="">
                 <div class="d-flex flex-row bd-highlight">
                     <div class="p-2 bd-highlight bg-light rounded">
@@ -41,8 +41,8 @@
 
         <div class="btn-group d-none d-md-block" role="group" aria-label="Basic example">
             <a class="btn btn-lg btn-outline-light active" href="">Inicio</a>
-            <a class="btn btn-lg btn-outline-light" href="login.html">Iniciar sesión</a>
-            <a class="btn btn-lg btn-outline-light" href="register.html">Registrar</a>
+            <a class="btn btn-lg btn-outline-light" href="login.php">Iniciar sesión</a>
+            <a class="btn btn-lg btn-outline-light" href="signup.php">Registrar</a>
         </div>
         
         <div class="dropdown dropleft d-block d-sm-block d-md-none">
@@ -50,9 +50,9 @@
                 <i class="material-icons">menu</i>
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item active" href="index.html">Inicio</a>
-                <a class="dropdown-item" href="login.html">Iniciar sesión</a>
-                <a class="dropdown-item" href="register.html">Registrar</a>
+                <a class="dropdown-item active" href="index.php">Inicio</a>
+                <a class="dropdown-item" href="login.php">Iniciar sesión</a>
+                <a class="dropdown-item" href="signup.php">Registrar</a>
             </div>
         </div>
     </nav>

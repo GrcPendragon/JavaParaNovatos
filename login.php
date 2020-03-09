@@ -21,7 +21,7 @@
 <body>
     <!--Barra de navegación-->
     <nav class="navbar navbar-light bg-info text-white">
-        <a class="navbar-brand text-white" href="index.html">
+        <a class="navbar-brand text-white" href="index.php">
             <h3 class="">
                 <div class="d-flex flex-row bd-highlight">
                     <div class="p-2 bd-highlight bg-light rounded">
@@ -39,9 +39,9 @@
         </a>
 
         <div class="btn-group d-none d-md-block" role="group" aria-label="Basic example">
-            <a class="btn btn-lg btn-outline-light" href="index.html">Inicio</a>
+            <a class="btn btn-lg btn-outline-light" href="index.php">Inicio</a>
             <a class="btn btn-lg btn-outline-light active" href="">Iniciar sesión</a>
-            <a class="btn btn-lg btn-outline-light" href="register.html">Registrar</a>
+            <a class="btn btn-lg btn-outline-light" href="signup.php">Registrar</a>
             
         </div>
         <div class="dropdown dropleft d-block d-sm-block d-md-none">
@@ -49,9 +49,9 @@
                 <i class="material-icons">menu</i>
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="index.html">Inicio</a>
-                <a class="dropdown-item active" href="login.html">Iniciar sesión</a>
-                <a class="dropdown-item" href="register.html">Registrar</a>
+                <a class="dropdown-item" href="index.php">Inicio</a>
+                <a class="dropdown-item active" href="login.php">Iniciar sesión</a>
+                <a class="dropdown-item" href="signup.php">Registrar</a>
             </div>
         </div>
     </nav>
@@ -63,7 +63,7 @@
                 <div class="container p-2 border border-info rounded-lg ">
                     <div class="d-flex justify-content-center flex-row bd-highlight">
                         <div class="rounded border border-info">
-                            <img src="/assets/img/logo.png" width="100" height="80"
+                            <img src="assets/img/logo.png" width="100" height="80"
                                 class="responsive d-inline-block align-top" alt="">
                         </div>
                     </div>
@@ -80,16 +80,16 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner p-2 border rounded-lg border-info">
                         <div class="carousel-item active">
-                            <img src="/assets/img/slide1.jpg" class="d-block w-100" alt="...">
+                            <img src="assets/img/slide1.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="/assets/img/slide2.jpg" class="d-block w-100" alt="...">
+                            <img src="assets/img/slide2.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="/assets/img/slide3.jpg" class="d-block w-100" alt="...">
+                            <img src="assets/img/slide3.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="/assets/img/slide4.jpg" class="d-block w-100" alt="...">
+                            <img src="assets/img/slide4.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>

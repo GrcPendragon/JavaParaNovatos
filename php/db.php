@@ -35,4 +35,25 @@ class DB{
         }
         
     }
+
+    function consulta($sql){
+
+        $query = connect()->prepare($sql);
+        $query->execute();
+
+        return $query;
+    }
+
+    function insertar($sql){
+        $query = connect()->prepare($sql);
+        $query->execute();
+    }
+
+    function actualizar(){
+
+    }
+
+    function eliminar(){
+
+    }
 }
