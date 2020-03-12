@@ -38,14 +38,14 @@ class DB{
 
     function consulta($sql){
 
-        $query = connect()->prepare($sql);
+        $query = $this->connect()->prepare($sql);
         $query->execute();
 
         return $query;
     }
 
     function insertar($sql){
-        $query = connect()->prepare($sql);
+        $query = $this->connect()->prepare($sql);
         $query->execute();
     }
 

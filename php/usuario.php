@@ -14,13 +14,13 @@ class User extends DB{
     private $estado;
     private $tema_Actual;
     
-    public function usuarioExiste($user, $pass){
+    public function usuarioExiste($correo, $pass){
     
         $md5pass = md5($pass);
         
         
-        $query = $this->consulta('SELECT * FROM usuario WHERE usuario = "'.$usuario.'" AND pass = "'.$pass.'"');
-        
+        $query = $this->consulta('SELECT * FROM usuario WHERE correo = "'.$correo.'" AND pass = "'.$pass.'"');
+        echo $query->rowCount();
         if($query->rowCount()){
             return true;
         }else{
@@ -29,14 +29,14 @@ class User extends DB{
         
     }
     
-    public function setUserInfo($user){
-        $query = $this->consulta('SELECT * FROM usuario WHERE user = "'.$usuario.'"');
+    public function setUserInfo($correo){
+        $query = $this->consulta('SELECT * FROM usuario WHERE correo = "'.$correo.'"');
         
         foreach($query as $usuarioActual){
             $this->id_Usuario = $usuarioActual['id_Usuario'];
             $this->nombre = $usuarioActual['nombre'];
             $this->apellido = $usuarioActual['apellido'];
-            $this->usaurio = $usuarioActual['usuario'];
+            $this->usuario = $usuarioActual['nickname'];
             $this->correo = $usuarioActual['correo'];
             $this->clave = $usuarioActual['pass'];
             $this->url_Img = $usuarioActual['url_Img'];
@@ -60,7 +60,7 @@ class User extends DB{
     }
     
     public function getUsuario(){
-        return $this->usaurio;
+        return $this->usuario;
     }
     
     public function getClave(){

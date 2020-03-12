@@ -68,10 +68,10 @@
                         </div>
                     </div>
                     
-                    <form action="" class="px-5 pt-3 text-center">
+                    <form action="php/iniciarSesion.php" method="post" class="px-5 pt-3 text-center">
                         <h2>Iniciar sesión</h2>
-                        <input type="email" class="m-2 form-control border border-info" placeholder="Correo">
-                        <input type="password" class="m-2 form-control border border-info" placeholder="Contraseña">
+                        <input type="email" name="correo" class="m-2 form-control border border-info" placeholder="Correo">
+                        <input type="password" name="pass" class="m-2 form-control border border-info" placeholder="Contraseña">
                         <button type="submit" class="m-3 btn btn-lg btn-outline-info">Iniciar sesion</button>
                     </form>
                 </div>
