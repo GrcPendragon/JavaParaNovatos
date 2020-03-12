@@ -75,9 +75,16 @@
                         <input type="password" name="pass" class="m-2 form-control border border-info" placeholder="Contraseña" required>
                         <input type="password" name="passR" class="m-2 form-control border border-info" placeholder="Repetir contraseña" required>
                         <?php
-                            if($existe == true){
-                                echo 'El usuario ya existe.';
+                            session_start();
+
+                            if (isset($_SESSION['existe'])) {
+                                if($_SESSION['existe'] == true){
+                                    echo 'El usuario ya existe.';
+                                    session_destroy();
+                                }
                             }
+                            
+                            
                         ?>
                         <button type="submit" class="m-3 btn btn-lg btn-outline-info">Registrarme</button>
 

@@ -93,9 +93,9 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="card-body">
-                            <h5 class="card-title">Comprender lo que codificas</h5>
+                            <h5 class="card-title">Aprender sobre errores</h5>
                             <p class="card-text">
-                                Lograras comprender el funcionamiento de cada expresión que te mostraremos.
+                                Indentificaras el funcionamiento 
                             </p>
                         </div>
                     </div>

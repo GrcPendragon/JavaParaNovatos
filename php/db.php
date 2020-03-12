@@ -10,8 +10,8 @@ class DB{
     public function __construct(){
         $this ->host = '127.0.0.1';
         $this ->db   = 'javapara_noobs';
-        $this ->user = 'javapara_Maria';
-        $this ->password = "Programador9";
+        $this ->user = 'root';
+        $this ->password = "";
         $this ->charset = 'utf8mb4';
     }
     

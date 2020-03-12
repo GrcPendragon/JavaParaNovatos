@@ -19,7 +19,7 @@ class User extends DB{
         $md5pass = md5($pass);
         
         
-        $query = $this->consulta('SELECT * FROM usuario WHERE correo = "'.$correo.'" AND pass = "'.$pass.'"');
+        $query = $this->consulta('SELECT * FROM usuario WHERE correo = "'.$correo.'" AND pass = "'.$md5pass.'"');
         echo $query->rowCount();
         if($query->rowCount()){
             return true;
